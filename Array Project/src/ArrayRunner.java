@@ -18,7 +18,8 @@ public class ArrayRunner
 			}
 		public static void greetUser()
 			{
-				System.out.println("Hi Whats your name?");
+				System.out.println("Hi, Whats your name?");
+				//fixed minor grammar error^^^
 				Scanner sc = new Scanner(System.in);
 				name = sc.nextLine();
 				System.out.println("Hi there " + name + "! " + "Lets play Connect 3!(Not confused with Connect 4)");
