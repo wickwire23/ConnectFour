@@ -1,13 +1,28 @@
+import java.util.ArrayList;
 
 public class MakeBoard
 	{
 		static String [][] connectBoard = new String [5][5];
 		static String [][] boardSpots = new String [5][5];
+		static ArrayList<String>charRow = new ArrayList<String>()
+					{{
+						add("A");
+						add("B");
+						add("C");
+						add("D");
+						add("E");
+					}};
+		static ArrayList<String>charCol = new ArrayList<String>()
+					{{
+						add("1");
+						add("2");
+						add("3");
+						add("4");
+						add("5");
+					}};
 		static int col;
 		static int row;
 		static int repeat;
-		//static ArrayList<String> rowChar  = new ArrayList<String>;
-		//static String [] colNum 
 		public static void main(String[] args)
 			{
 				fillSpaces();
@@ -52,9 +67,11 @@ public class MakeBoard
 					
 					for(col =0;col<connectBoard[0].length;col++)
 						{
-							
+							boardSpots[row][col]=charRow.get(row)+charCol.get(col);
 						}
 				}
+			
 		}
+		
 		
 	}

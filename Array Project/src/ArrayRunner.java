@@ -14,7 +14,9 @@ public class ArrayRunner
 				explainRules();
 				MakeBoard.main(args);
 				pickCharacter();
+				CheckUnderneath.main(args);
 				makeMove();
+				aiMove();
 			}
 		public static void greetUser()
 			{
@@ -75,22 +77,178 @@ public class ArrayRunner
 		public static void makeMove()
 		{
 			System.out.println("Make your move!");
-			System.out.println("The moves available are ");
-			for(int i =0;i>MakeBoard.boardSpots.length;i++)
-				{
-					System.out.println("("+ i +")" + MakeBoard.boardSpots[i]);
-				}
-			
+//			System.out.println("The moves available are ");
+//			
+//			for(int i =0;i<MakeBoard.boardSpots.length;i++)
+//				{
+//					for(int p =0;p<MakeBoard.boardSpots[0].length;p++)
+//						{
+//					System.out.println("("+ i +")" + MakeBoard.boardSpots[i][p]);
+//						}
+//				}
 			Scanner sc = new Scanner(System.in);
 			playerMove = sc.nextLine();
 			switch(playerMove)
 			{
-				case "1":
-				case "2":
-				case "3":
-				case "4":
-				case "5":
+				case "A1":
+				case "a1":
+						{
+							MakeBoard.connectBoard[0][0]= character;
+							break;
+						}
+				case "A2":
+				case "a2":
+						{
+							MakeBoard.connectBoard[0][1]= character;
+							break;
+						}
+				case "A3":
+				case "a3":
+						{
+							MakeBoard.connectBoard[0][2]= character;
+							break;
+						}
+				case "A4":
+				case "a4":
+						{
+							MakeBoard.connectBoard[0][3]= character;
+							break;
+						}
+				case "A5":
+				case "a5":
+						{
+							MakeBoard.connectBoard[0][4]= character;
+							break;
+						}
+				case "B1":
+				case "b1":
+						{
+							MakeBoard.connectBoard[1][0]= character;
+							break;
+						}
+				case "B2":
+				case "b2":
+						{
+							MakeBoard.connectBoard[1][1]= character;
+							break;
+						}
+				case "B3":
+				case "b3":
+						{
+							MakeBoard.connectBoard[1][2]= character;
+							break;
+						}
+				case "B4":
+				case "b4":
+						{
+							MakeBoard.connectBoard[1][3]= character;
+							break;
+						}
+				case "B5":
+				case "b5":
+						{
+							MakeBoard.connectBoard[1][4]= character;
+							break;
+						}
+				case "C1":
+				case "c1":
+						{
+							MakeBoard.connectBoard[2][0]= character;
+							break;
+						}
+				case "C2":
+				case "c2":
+						{
+							MakeBoard.connectBoard[2][1]= character;
+							break;
+						}
+				case "C3":
+				case "c3":
+						{
+							MakeBoard.connectBoard[2][2]= character;
+							break;
+						}
+				case "C4":
+				case "c4":
+						{
+							MakeBoard.connectBoard[2][3]= character;
+							break;
+						}
+				case "C5":
+				case "c5":
+						{
+							MakeBoard.connectBoard[2][4]= character;
+							break;
+						}
+				case "D1":
+				case "d1":
+						{
+							MakeBoard.connectBoard[3][0]= character;
+							break;
+						}
+				case "D2":
+				case "d2":
+						{
+							MakeBoard.connectBoard[3][1]= character;
+							break;
+						}
+				case "D3":
+				case "d3":
+						{
+							MakeBoard.connectBoard[3][2]= character;
+							break;
+						}
+				case "D4":
+				case "d4":
+						{
+							MakeBoard.connectBoard[3][3]= character;
+							break;
+						}
+				case "D5":
+				case "d5":
+						{
+							MakeBoard.connectBoard[3][4]= character;
+							break;
+						}
+				case "E1":
+				case "e1":
+						{
+							MakeBoard.connectBoard[4][0]= character;
+							break;
+						}
+				case "E2":
+				case "e2":
+						{
+							MakeBoard.connectBoard[4][1]= character;
+							break;
+						}
+				case "E3":
+				case "e3":
+						{
+							MakeBoard.connectBoard[4][2]= character;
+							break;
+						}
+				case "E4":
+				case "e4":
+						{
+							MakeBoard.connectBoard[4][3]= character;
+							break;
+						}
+				case "E5":
+				case "e5":
+						{
+							MakeBoard.connectBoard[4][4]= character;
+							break;
+						}
 			}
+			MakeBoard.makeBoard();
+		}
+		public static void aiMove()
+		{
+			int randomRow =(int)(Math.random()*4);
+			int randomCol = (int)(Math.random()*4);
+			MakeBoard.connectBoard[][]=aiCharacter;
+			MakeBoard.makeBoard();
 		}
 		
 	}

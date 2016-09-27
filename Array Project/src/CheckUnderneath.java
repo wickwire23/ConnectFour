@@ -9,17 +9,15 @@ public class CheckUnderneath
 			}
 		public static void checkBelow()
 		{
-		for(int i=0;i>MakeBoard.arrayAvaiable.length;i++)
+		for(int i=0;i<MakeBoard.connectBoard.length;i++)
 			{
-				
-			
-			if(MakeBoard.arrayAvaiable[i].equals(""))
-				{
-					switch(i)
+				for(int p=0;p<MakeBoard.connectBoard[0].length;p++)
 					{
-						
+						if(!MakeBoard.connectBoard[i][p].equals(""))
+							{
+								MakeBoard.connectBoard[i][p].equals(null);	
+							}
 					}
-				}
 			}
-	}
+		}
 	}
