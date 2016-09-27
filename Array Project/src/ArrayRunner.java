@@ -14,9 +14,11 @@ public class ArrayRunner
 				explainRules();
 				MakeBoard.main(args);
 				pickCharacter();
+					
 				CheckUnderneath.main(args);
 				makeMove();
 				aiMove();
+				
 			}
 		public static void greetUser()
 			{
@@ -247,7 +249,15 @@ public class ArrayRunner
 		{
 			int randomRow =(int)(Math.random()*4);
 			int randomCol = (int)(Math.random()*4);
-			MakeBoard.connectBoard[][]=aiCharacter;
+			if(!MakeBoard.connectBoard[randomRow][randomCol].equals(""))
+				{
+					aiMove();
+				}
+			else
+				{
+					MakeBoard.connectBoard[randomRow][randomCol]=aiCharacter;
+				}
+			
 			MakeBoard.makeBoard();
 		}
 		
